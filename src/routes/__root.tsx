@@ -77,14 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Милан Фролов — Репетитор иностранных языков" },
+      { name: "description", content: "Индивидуальные и групповые уроки английского, французского и испанского. Милан Фролов, преподаватель языков." },
+      { name: "author", content: "Milan Frolov" },
+      { property: "og:title", content: "Милан Фролов — Языковой ментор" },
+      { property: "og:description", content: "Английский C1, Французский B2, Испанский B2. Уроки от 20 BYN." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
