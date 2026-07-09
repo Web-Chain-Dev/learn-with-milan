@@ -125,7 +125,23 @@ export const translations = {
   },
 } as const;
 
-type Ctx = { lang: Lang; setLang: (l: Lang) => void; t: (typeof translations)["ru"] };
+type Dict = {
+  nav: { name: string };
+  hero: { name: string; tagline: string; scroll: string };
+  about: { kicker: string; title: string; body: string; stats: ReadonlyArray<{ n: string; l: string }> };
+  english: { title: string; level: string; body: string; focus: string; tags: ReadonlyArray<string> };
+  french: { display: string; title: string; level: string; body: string; cards: ReadonlyArray<{ title: string; body: string }> };
+  spanish: { title: string; subtitle: string; level: string; body: string };
+  pricing: {
+    kicker: string;
+    individual: { title: string; price: string; body: string };
+    group: { title: string; price: string; body: string };
+    cta: string;
+  };
+  footer: { rights: string; links: ReadonlyArray<string> };
+};
+
+type Ctx = { lang: Lang; setLang: (l: Lang) => void; t: Dict };
 
 const I18nCtx = createContext<Ctx | null>(null);
 
