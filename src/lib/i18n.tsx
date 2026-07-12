@@ -4,20 +4,20 @@ export type Lang = "ru" | "en";
 
 export const translations = {
   ru: {
-    nav: { name: "МИЛАН ФРОЛОВ" },
+    nav: { name: "ЯРОСЛАВ" },
     hero: {
-      name: "МИЛАН\nФРОЛОВ",
-      tagline: "Языковой ментор, 20 лет",
+      name: "ЯРОСЛАВ",
+      tagline: "Языковой ментор",
       scroll: "прокрутите вниз",
     },
     about: {
       kicker: "О преподавателе",
       title: "Я не преподаю языки. Я строю мосты между культурами.",
-      body: "Мне 20 лет. Я родился в русскоязычной среде и последние годы жил внутри трёх других языков: английского — на уровне C1, французского и испанского — на B2. Мои уроки — про свободу говорить, а не про заучивание.",
+      body: "Я родился в русскоязычной среде и последние годы жил внутри трёх других языков: английского — на уровне C1, французского и испанского — на B2. Мои уроки — про свободу говорить, а не про заучивание.",
       stats: [
-        { n: "3", l: "языка обучения" },
         { n: "C1", l: "английский" },
-        { n: "B2", l: "французский и испанский" },
+        { n: "B2", l: "французский" },
+        { n: "B2", l: "испанский" },
       ],
     },
     english: {
@@ -59,25 +59,25 @@ export const translations = {
       cta: "Записаться на урок",
     },
     footer: {
-      rights: "© 2026 MILAN FROLOV — LANGUAGE MENTOR",
+      rights: "© 2026 ЯРОСЛАВ — LANGUAGE MENTOR",
       links: ["Instagram", "Telegram", "WhatsApp"],
     },
   },
   en: {
-    nav: { name: "MILAN FROLOV" },
+    nav: { name: "YAROSLAV" },
     hero: {
-      name: "MILAN\nFROLOV",
-      tagline: "Language mentor, 20 years old",
+      name: "YAROSLAV",
+      tagline: "Language mentor",
       scroll: "scroll down",
     },
     about: {
       kicker: "About the tutor",
       title: "I don't teach languages. I build bridges between cultures.",
-      body: "I'm 20. Native Russian, C1 in English, B2 in French and Spanish. My lessons are about the freedom to speak, not memorising rules.",
+      body: "Native Russian, C1 in English, B2 in French and Spanish. My lessons are about the freedom to speak, not memorising rules.",
       stats: [
-        { n: "3", l: "languages taught" },
         { n: "C1", l: "english" },
-        { n: "B2", l: "french and spanish" },
+        { n: "B2", l: "french" },
+        { n: "B2", l: "spanish" },
       ],
     },
     english: {
@@ -119,7 +119,7 @@ export const translations = {
       cta: "Book a lesson",
     },
     footer: {
-      rights: "© 2026 MILAN FROLOV — LANGUAGE MENTOR",
+      rights: "© 2026 YAROSLAV — LANGUAGE MENTOR",
       links: ["Instagram", "Telegram", "WhatsApp"],
     },
   },
