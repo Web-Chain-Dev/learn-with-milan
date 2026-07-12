@@ -36,8 +36,8 @@ export function FrenchSection() {
       // Fan reveal
       cardsRef.current.forEach((card, i) => {
         if (!card) return;
-        const rot = [-15, 0, 15][i];
-        const x = [-120, 0, 120][i];
+        const rot = [-14, 0, 14][i];
+        const x = [-200, 0, 200][i];
         gsap.fromTo(
           card,
           { rotate: 0, x: 0, y: 200, opacity: 0 },
@@ -60,12 +60,12 @@ export function FrenchSection() {
   useEffect(() => {
     cardsRef.current.forEach((card, i) => {
       if (!card) return;
-      const rot = [-15, 0, 15][i];
-      const x = [-120, 0, 120][i];
+      const rot = [-14, 0, 14][i];
+      const x = [-200, 0, 200][i];
       if (hovered === i) {
-        gsap.to(card, { rotate: 0, x, y: -40, scale: 1.08, zIndex: 30, duration: 0.6, ease: "expo.out" });
+        gsap.to(card, { rotate: 0, x, y: -50, scale: 1.06, zIndex: 30, duration: 0.6, ease: "expo.out" });
       } else if (hovered !== null) {
-        gsap.to(card, { rotate: rot, x: x * 1.4, y: 0, scale: 0.92, zIndex: 1, duration: 0.6, ease: "expo.out" });
+        gsap.to(card, { rotate: rot, x: x * 1.35, y: 0, scale: 0.94, zIndex: 1, duration: 0.6, ease: "expo.out" });
       } else {
         gsap.to(card, { rotate: rot, x, y: 0, scale: 1, zIndex: i, duration: 0.6, ease: "expo.out" });
       }
@@ -89,8 +89,8 @@ export function FrenchSection() {
         </div>
       </div>
 
-      <div className="fr-fan relative flex justify-center items-center h-[520px] md:h-[600px]">
-        <div className="relative w-56 h-72 md:w-64 md:h-80">
+      <div className="fr-fan relative flex justify-center items-center h-[640px] md:h-[820px]">
+        <div className="relative w-[80vw] max-w-[360px] h-[480px] md:w-[420px] md:h-[560px]">
           {t.french.cards.map((card, i) => (
             <div
               key={i}
@@ -99,7 +99,7 @@ export function FrenchSection() {
               }}
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
-              className="absolute inset-0 bg-white p-3 shadow-2xl rounded-sm border border-black/5 cursor-pointer"
+              className="absolute inset-0 bg-white p-4 md:p-5 shadow-2xl rounded-sm border border-black/5 cursor-pointer"
               style={{ zIndex: i }}
             >
               <img
@@ -108,20 +108,17 @@ export function FrenchSection() {
                 loading="lazy"
                 width={600}
                 height={750}
-                className="w-full h-[75%] object-cover"
+                className="w-full h-[80%] object-cover"
               />
-              <div className="pt-3">
-                <div className="font-serif italic text-sm text-ink">{card.title}</div>
-                <div className="font-mono text-[9px] uppercase tracking-widest text-ink/50 mt-1 leading-relaxed">
+              <div className="pt-4">
+                <div className="font-serif italic text-xl md:text-2xl text-ink">{card.title}</div>
+                <div className="font-mono text-[10px] uppercase tracking-widest text-ink/50 mt-2 leading-relaxed">
                   {card.body}
                 </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
-      <div className="text-center mt-16 max-w-md mx-auto">
-        <p className="text-ink/60 text-sm">{t.french.body}</p>
       </div>
     </section>
   );

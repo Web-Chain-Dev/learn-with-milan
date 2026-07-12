@@ -51,9 +51,6 @@ export function About() {
             height={1200}
             className="about-img w-full aspect-[3/4] object-cover grayscale"
           />
-          <div className="absolute bottom-4 left-4 font-mono text-[10px] uppercase tracking-widest text-paper mix-blend-difference">
-            Ярослав / Minsk
-          </div>
         </div>
         <div className="lg:col-span-7 flex flex-col justify-center">
           <div className="font-mono text-[10px] uppercase tracking-[0.4em] text-accent mb-8">
