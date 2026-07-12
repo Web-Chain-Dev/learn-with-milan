@@ -52,7 +52,7 @@ export function About() {
             className="about-img w-full aspect-[3/4] object-cover grayscale"
           />
           <div className="absolute bottom-4 left-4 font-mono text-[10px] uppercase tracking-widest text-paper mix-blend-difference">
-            Milan, 20 / Minsk
+            Ярослав / Minsk
           </div>
         </div>
         <div className="lg:col-span-7 flex flex-col justify-center">

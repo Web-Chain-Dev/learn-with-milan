@@ -52,44 +52,48 @@ export function Hero() {
   const nameLines = t.hero.name.split("\n");
 
   return (
-    <section ref={rootRef} className="relative h-svh min-h-[600px] flex flex-col justify-end p-6 md:p-12 overflow-hidden bg-ink">
-      <img
-        ref={imgRef}
-        src={heroImg}
-        alt="Milan Frolov portrait"
-        width={1920}
-        height={1080}
-        className="absolute inset-0 w-full h-full object-cover opacity-70"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
-      <div className="relative z-10 max-w-6xl">
-        <h1 className="font-display text-[18vw] md:text-[15vw] leading-[0.85] tracking-tighter text-paper">
-          {nameLines.map((line, li) => (
-            <span key={li} className="block overflow-hidden">
-              <span className="inline-block">
-                {Array.from(line).map((ch, i) => (
-                  <span key={i} className="hero-char inline-block">
-                    {ch === " " ? "\u00A0" : ch}
-                  </span>
-                ))}
+    <section
+      ref={rootRef}
+      className="relative bg-paper text-ink pt-28 md:pt-32 pb-16 md:pb-24 px-6 md:px-12 overflow-hidden"
+    >
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
+        <div className="md:col-span-7 order-2 md:order-1">
+          <h1 className="font-display text-[22vw] md:text-[11vw] leading-[0.85] tracking-tighter">
+            {nameLines.map((line, li) => (
+              <span key={li} className="block overflow-hidden">
+                <span className="inline-block">
+                  {Array.from(line).map((ch, i) => (
+                    <span key={i} className="hero-char inline-block">
+                      {ch === " " ? "\u00A0" : ch}
+                    </span>
+                  ))}
+                </span>
               </span>
-            </span>
-          ))}
-        </h1>
-        <div className="mt-8 flex flex-wrap gap-3 text-paper/85 font-mono text-xs uppercase tracking-widest">
-          <span className="hero-tag px-4 py-1.5 border border-paper/30 rounded-full backdrop-blur-md">
-            English C1
-          </span>
-          <span className="hero-tag px-4 py-1.5 border border-paper/30 rounded-full backdrop-blur-md">
-            Français B2
-          </span>
-          <span className="hero-tag px-4 py-1.5 border border-paper/30 rounded-full backdrop-blur-md">
-            Español B2
-          </span>
+            ))}
+          </h1>
+          <p className="hero-tag mt-6 font-mono text-[11px] uppercase tracking-[0.35em] text-ink/60">
+            {t.hero.tagline}
+          </p>
+          <div className="mt-8 flex flex-wrap gap-2 font-mono text-[11px] uppercase tracking-widest">
+            <span className="hero-tag px-3 py-1.5 border border-ink/20 rounded-full">English C1</span>
+            <span className="hero-tag px-3 py-1.5 border border-ink/20 rounded-full">Français B2</span>
+            <span className="hero-tag px-3 py-1.5 border border-ink/20 rounded-full">Español B2</span>
+          </div>
+        </div>
+        <div className="md:col-span-5 order-1 md:order-2 relative overflow-hidden rounded-sm bg-ink/5">
+          <img
+            ref={imgRef}
+            src={heroImg}
+            alt="Yaroslav portrait"
+            width={800}
+            height={1000}
+            className="w-full aspect-[4/5] object-cover"
+          />
         </div>
       </div>
-      <div className="absolute bottom-6 right-6 md:bottom-10 md:right-10 z-10 font-mono text-[10px] uppercase tracking-[0.3em] text-paper/60 hero-tag">
-        ↓ {t.hero.scroll}
+      <div className="mt-16 md:mt-24 flex justify-between items-end font-mono text-[10px] uppercase tracking-[0.3em] text-ink/50 hero-tag max-w-7xl mx-auto">
+        <span>Minsk · 2026</span>
+        <span>↓ {t.hero.scroll}</span>
       </div>
     </section>
   );
